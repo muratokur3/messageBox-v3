@@ -1,0 +1,89 @@
+#btnOnlMsgAdmin{
+  width: 80px;
+  height: 80px;
+  background-color: orange;
+  border-radius: 80px;
+  border: 1px solid white;
+  font-size: x-large;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 3;
+  visibility: hidden;
+
+}
+::-webkit-scrollbar {
+  width: 3px; /* Dikey çubuk genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:green; /* Çubuk rengi */
+  border-radius: 6px; /* Çubuk köşe yuvarlama */
+}
+#messageBoxAdmin{
+    width: 400px;
+    height: 700px;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    color: white;
+    font-size:medium;
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  background-color: bisque;
+}
+#messageBoxControlAdmin{
+  background-color: orange;
+  width: 100%;
+  height: 10%;
+  border: none;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  
+
+}
+
+#messageBoxControlAdmin button{
+  width: 40px;
+  height: 40px;
+  font-size: large;
+    background: rgba(19, 19, 19, 0.084);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0 auto;
+  cursor: pointer;
+  
+}
+#messageBoxControlAdmin button:hover{
+  
+  background: rgba(19, 19, 19, 0.300);
+}
+  #messageBoxContentAdmin{
+    padding: 5%;
+  width: 100%;
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  }
+  #txtMessageAdmin{
+    width: 65%;
+    height: 80%;
+    border-radius: 1900px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1.5% 0% 0% 3%;
+  }
+
+  

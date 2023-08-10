@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+        <button id="btnOnlMsg" onclick="openMessageBox()">
+            <i class="fa-regular fa-comments fa-beat fa-xl" style="color: #ffffff;"></i></button>
+        <button id="messageAlert">Merhaba bize buradan yazabilirsin</button>
+        <div id="messageBox">
+            <div id="messageBoxControl">
+                <p><i class="fa-regular fa-comments fa-beat fa-2xl" style="color: #ffffff;"></i>   Web Site Online Support</p>
+                <button onclick="closeMessageBox()">X</button>
+            </div>
+
+
+            <div id="messageBoxContent">
+              
+
+            </div>
+            <div id="messageSend">
+                <button id="btnEmoji"> <i class="fa-regular fa-face-smile fa-2xl" style="color: #ffffff;"></i></button>
+                <button id="btnPlus"><i class="fa-solid fa-plus fa-2xl" style="color: white;"></i></button>
+                <textarea id="txtMessage" placeholder="Writing message.."></textarea>
+                <button id="btnSend" onclick="sendMessage()"><i class="fa-regular fa-paper-plane fa-bounce fa-2xl" style="color: white;"></i></button>
+            </div>
+        </div>
+
+
+
+
+        <button id="btnOnlMsgAdmin" onclick="openMessageBoxAdmin()">
+            <i class="fa-regular fa-comments fa-beat fa-xl" style="color: #ffffff;"></i></button>
+        
+        <div id="messageBoxAdmin">
+            <div id="messageBoxControlAdmin">
+                <p><i class="fa-regular fa-comments fa-beat fa-2xl" style="color: #ffffff;"></i> user > Murat</p>
+                <button onclick="closeMessageBoxAdmin()">X</button>
+            </div>
+            <div id="messageBoxContentAdmin">
+            </div>
+            <div id="messageSend">
+                <button id="btnEmoji"> <i class="fa-regular fa-face-smile fa-2xl" style="color: #ffffff;"></i></button>
+                <button id="btnPlus"><i class="fa-solid fa-plus fa-2xl" style="color: white;"></i></button>
+                <textarea id="txtMessageAdmin" placeholder="Writing message.."></textarea>
+                <button id="btnSend" onclick="sendMessageAdmin()"><i class="fa-regular fa-paper-plane fa-bounce fa-2xl" style="color: white;"></i></button>
+            </div>
+        </div>
+  
+    <script src="/script.js">
+
+
+
+    </script>
+</body>
+
+</html>

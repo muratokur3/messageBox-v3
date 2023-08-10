@@ -74,7 +74,13 @@ const messagess = (messages) => {
 const messageBotResult = (message) => {
   message = message.toLowerCase();
 
-  if (message.includes("merhaba")) {
+  if (
+    message.includes("merhaba") ||
+    message.includes("selam") ||
+    message.includes("günaydın") ||
+    message.includes("selamunaleyküm") ||
+    message.includes("yardım edin")
+  ) {
     return "Merhaba! Size nasıl yardımcı olabilirim?";
   } else if (message.includes("ürünler")) {
     return "Mağazamızda elektronik, giyim, ev gereçleri gibi birçok kategoride ürün bulunmaktadır. Hangi kategoride arama yapmak istersiniz?";
@@ -95,14 +101,17 @@ const messageBotResult = (message) => {
     message.includes("hoşça kal")
   ) {
     return "Rica ederim, herhangi bir sorunuz olursa sormaktan çekinmeyin. İyi günler!";
-  }else if (
+  } else if (
     message.includes("destek") ||
     message.includes("canlı") ||
     message.includes("gerçek") ||
     message.includes("temsilci")
   ) {
-    messages.push({ userName: "Admin", messageText: "sizi destek birimine aktardım!" });
-    support =true
+    messages.push({
+      userName: "Admin",
+      messageText: "sizi destek birimine aktardım!",
+    });
+    support = true;
   } else {
     return "Üzgünüm, anlamadım. Daha spesifik bir soru sorsanız yardımcı olabilirim.";
   }
@@ -126,27 +135,22 @@ const sendMessage = () => {
   if (messageText.value != "") {
     messages.push({ userName: "Murat", messageText: messageText.value });
 
-    
-      let result = messageBotResult(messageText.value);
-      if (support!=true) {
+    let result = messageBotResult(messageText.value);
+    if (support != true) {
       messages.push({ userName: "Admin", messageText: result });
       messageText.value = "";
       messageResetAndWriting();
-    }
-    else{
-     
-
-  document.getElementById("messageBoxAdmin").style.visibility="visible";
+    } else {
+      document.getElementById("messageBoxAdmin").style.visibility = "visible";
       messageText.value = "";
       messageResetAndWriting();
-      
     }
   }
 };
 
 const sendMessageAdmin = () => {
   let messageTextAdmin = document.getElementById("txtMessageAdmin");
- 
+
   if (messageTextAdmin.value != "") {
     const messageboxcontentadmin = document.getElementById(
       "messageBoxContentAdmin"
